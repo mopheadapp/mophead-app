@@ -1,5 +1,11 @@
-import colors from 'vuetify/es5/util/colors'
 export default {
+  ssr: false,
+  server: {
+    port: process.env.PORT || 8001
+  },
+  generate: {
+    fallback: true
+  },
   head: {
     titleTemplate: '%s',
     title: 'mophead',
@@ -17,22 +23,9 @@ export default {
       { href: "https://fonts.googleapis.com/css2?family=Montserrat&display=swap", rel: "stylesheet" }
     ]
   },
-  ssr: false,
-  server: {
-    port: process.env.PORT || 8001
-  },
-  generate: {
-    fallback: true
-  },
-  css: [
-  ],
-  plugins: [
-  ],
   components: true,
   buildModules: [
     '@nuxtjs/vuetify',
-  ],
-  modules: [
   ],
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -50,6 +43,4 @@ export default {
       }
     }
   },
-  build: {
-  }
 }

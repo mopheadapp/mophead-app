@@ -4,7 +4,7 @@ export default {
     titleTemplate: '%s',
     title: 'mophead',
     htmlAttrs: {
-      lang: 'tr'
+      lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
@@ -19,7 +19,10 @@ export default {
   },
   ssr: false,
   server: {
-    port: 8001
+    port: process.env.PORT || 8001
+  },
+  generate: {
+    fallback: true
   },
   css: [
   ],

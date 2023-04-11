@@ -73,7 +73,6 @@ export default {
     ...mapGetters({ getBaseURL: "getBaseURL" }),
     buttonState() {
       return (
-        this.data.tradeRegistryNumber.length > 0 &&
         this.data.taxNumber.length > 0 &&
         this.data.email.length > 0 &&
         this.data.phoneNumber.length > 0
@@ -91,20 +90,10 @@ export default {
       class="rounded-lg mx-auto"
       width="500px"
     >
-      <v-card-title class="text-h6 font-weight-bold text--text pa-5"
+      <v-card-title class="text-h4 font-weight-bold text--text pa-5"
         >Kayıt</v-card-title
       >
-      <v-text-field
-        v-model="data.tradeRegistryNumber"
-        outlined
-        dense
-        hide-details
-        label="Ticaret sicil numarası"
-        class="rounded-lg ma-5"
-        type="number"
-        :error="button.errorState"
-        @input="removeError"
-      ></v-text-field>
+   
       <v-text-field
         v-model="data.taxNumber"
         outlined

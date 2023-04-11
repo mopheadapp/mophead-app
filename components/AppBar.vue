@@ -8,17 +8,33 @@ export default {
     },
     ...mapMutations({ setRegisterPrompt: "setRegisterPrompt" }),
   },
+  computed: {
+    imageWidth() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "160px";
+        case "sm":
+          return "160px";
+        case "md":
+          return "160px";
+        case "lg":
+          return "240px";
+        case "xl":
+          return "240px";
+      }
+    },
+  },
 };
 </script>
 <template>
   <v-app-bar color="accent" app flat>
     <v-container class="pa-0">
       <v-app-bar color="accent" flat>
-        <v-toolbar-title
-          style="cursor: pointer"
-          class="text-h6 font-weight-bold primary--text mb-n3 ma-sm-3 mx-auto"
-          >mophead</v-toolbar-title
-        >
+        <v-img
+        :src="require('~/static/logo.png')"                   
+        :max-width="imageWidth"
+        contain
+        />
         <v-spacer></v-spacer>
         <v-btn
           elevation="2"

@@ -6,7 +6,7 @@ export default {
   data() {
     return {
       data: {
-        tradeRegistryNumber: "",
+        tradeRegistryNumber: "1234123412341234",
         taxNumber: "",
         email: "",
         phoneNumber: "",
@@ -25,7 +25,7 @@ export default {
     close() {
       this.setRegisterPrompt(false);
       this.data = {
-        tradeRegistryNumber: "",
+        tradeRegistryNumber: "1234123412341234",
         taxNumber: "",
         email: "",
         phoneNumber: "",

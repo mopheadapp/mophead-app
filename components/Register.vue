@@ -58,7 +58,15 @@ export default {
         }, 1000);
       } catch (err) {
         this.button.errorState = true;
-        this.button.message = err.response.data.message;
+        if(err.response.data.message === "Enter a valid tax number"){
+          this.button.message="10 haneli vergi numarası giriniz"
+        }
+        if(err.response.data.message === "Enter a valid e-mail"){
+          this.button.message="Geçerli bir  e-posta adresi giriniz"
+        }
+        if(err.response.data.message === "Enter a valid number"){
+          this.button.message="Geçerli bir telefon numarası giriniz"
+        }
         this.button.state = true;
         this.button.loading = false;
       }

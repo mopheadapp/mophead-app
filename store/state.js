@@ -1,7 +1,7 @@
 export default () => ({
     baseURL: {
         local: "http://localhost:3000/api",
-        prod: "https://dev.mophead.app/api"
+        prod: "https://apis.mophead.app/api"
     },
     registerPrompt: false
-});
+})

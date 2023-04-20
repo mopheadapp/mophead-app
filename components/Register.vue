@@ -1,12 +1,11 @@
 <script>
-import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
+import { mapGetters, mapMutations, mapState } from "vuex";
 import axios from "axios";
 export default {
   name: "RegisterComponent",
   data() {
     return {
       data: {
-        tradeRegistryNumber: "1234123412341234",
         taxNumber: "",
         email: "",
         phoneNumber: "",
@@ -25,7 +24,6 @@ export default {
     close() {
       this.setRegisterPrompt(false);
       this.data = {
-        tradeRegistryNumber: "1234123412341234",
         taxNumber: "",
         email: "",
         phoneNumber: "",
@@ -45,7 +43,7 @@ export default {
         const config = {
           method: "post",
           headers: { "content-type": "application/json" },
-          url: `${this.getBaseURL}/session/clinicRegister`,
+          url: `${this.getBaseURL}/clinic/clinicRegister`,
           data: this.data,
         };
         this.button.loading = true;
@@ -98,10 +96,7 @@ export default {
       class="rounded-lg mx-auto"
       width="500px"
     >
-      <v-card-title class="text-h4 font-weight-bold text--text pa-5"
-        >Kayıt</v-card-title
-      >
-   
+      <v-card-title class="text-h6 font-weight-bold text--text pa-5" >Kayıt</v-card-title>
       <v-text-field
         v-model="data.taxNumber"
         outlined
@@ -143,8 +138,7 @@ export default {
           class="rounded-lg text-capitalize btnText--text font-weight-bold text-body-1"
           block
           @click="confirm"
-          >Gönder</v-btn
-        >
+          >Gönder</v-btn>
       </div>
     </v-card>
     <v-card

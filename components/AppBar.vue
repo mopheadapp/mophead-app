@@ -18,9 +18,9 @@ export default {
         case "md":
           return "160px";
         case "lg":
-          return "240px";
+          return "160px";
         case "xl":
-          return "240px";
+          return "200px";
       }
     },
   },

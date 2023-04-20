@@ -20,7 +20,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-      { href: "https://fonts.googleapis.com/css2?family=Montserrat&display=swap", rel: "stylesheet" }
+      { href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap", rel: "stylesheet" }
     ]
   },
   components: true,

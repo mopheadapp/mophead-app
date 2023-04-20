@@ -19,7 +19,7 @@ jobs:
       - name: Google App Engine
         uses: google-github-actions/deploy-appengine@v0.4.0
         with:
-          project_id: landing-mophead
+          project_id: mophead-app
           version: master
           credentials: ${{ secrets.GOOGLE_APP_ENGINE_CREDENTIALS}}
           flags: --no-cache

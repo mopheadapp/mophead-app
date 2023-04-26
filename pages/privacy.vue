@@ -1,6 +1,13 @@
 <script>
+import { mapMutations } from "vuex";
 export default {
-  name: "PrivacyPage"
+  name: "PrivacyPage",
+  created(){
+   this.setButtonDisabled(false)
+  },
+  methods: {
+    ...mapMutations({ setButtonDisabled: "setButtonDisabled" }),
+  },
   };
 </script>
 <template>

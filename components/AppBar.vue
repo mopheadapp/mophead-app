@@ -1,5 +1,5 @@
 <script>
-import { mapMutations } from "vuex";
+import { mapMutations,mapState } from "vuex";
 export default {
   name: "AppBarComponent",
   methods: {
@@ -12,6 +12,7 @@ export default {
     ...mapMutations({ setRegisterPrompt: "setRegisterPrompt" }),
   },
   computed: {
+    ...mapState({buttonDisabled:"buttonDisabled"}),
     imageWidth() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
@@ -42,6 +43,7 @@ export default {
         />
         <v-spacer></v-spacer>
         <v-btn
+          v-if='buttonDisabled'
           elevation="2"
           color="primary"
           class="rounded-lg text-capitalize btnText--text font-weight-bold text-body-1"

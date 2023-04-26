@@ -1,8 +1,15 @@
 <script>
+import { mapMutations } from "vuex";
 import Register from "../components/Register.vue";
 export default {
   name: "IndexPage",
   components: { Register },
+  created(){
+   this.setButtonDisabled(true)
+  },
+  methods: {
+    ...mapMutations({ setButtonDisabled: "setButtonDisabled" }),
+  },
 };
 </script>
 <template>

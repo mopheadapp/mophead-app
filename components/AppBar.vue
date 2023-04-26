@@ -6,6 +6,9 @@ export default {
     register() {
       this.setRegisterPrompt(true);
     },
+    clickHome(){
+      this.$router.push("/")
+    },
     ...mapMutations({ setRegisterPrompt: "setRegisterPrompt" }),
   },
   computed: {
@@ -31,6 +34,8 @@ export default {
     <v-container class="pa-0">
       <v-app-bar color="accent" flat>
         <v-img
+        @click='clickHome'
+        class='hover-privacy'
         :src="require('~/static/logo.png')"                   
         :max-width="imageWidth"
         contain
@@ -47,3 +52,8 @@ export default {
     </v-container>
   </v-app-bar>
 </template>
+<style>
+.hover-privacy{
+  cursor: pointer;
+}
+</style>

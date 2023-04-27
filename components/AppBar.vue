@@ -48,7 +48,7 @@ export default {
           color="primary"
           class="rounded-lg text-capitalize btnText--text font-weight-bold text-body-1"
           @click="register"
-          >Kayıt ol</v-btn
+          >Kurumsal kayıt</v-btn
         >
       </v-app-bar>
     </v-container>

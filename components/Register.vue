@@ -57,7 +57,7 @@ export default {
       } catch (err) {
         this.button.errorState = true;
         if(err.response.data.message === "Enter a valid tax number"){
-          this.button.message="10 haneli vergi numarası giriniz"
+          this.button.message="VKN/TCKN giriniz"
         }
         if(err.response.data.message === "Enter a valid e-mail"){
           this.button.message="Geçerli bir  e-posta adresi giriniz"
@@ -102,7 +102,7 @@ export default {
         outlined
         dense
         hide-details
-        label="Vergi numarası"
+        label="VKN/TCKN"
         class="rounded-lg ma-5"
         type="number"
         :error="button.errorState"

@@ -7,7 +7,7 @@ export default {
   <v-app>
     <v-main>
       <AppBar />
-      <v-container>
+      <v-container fill-height>
         <Nuxt />
       </v-container>
       <Footer />

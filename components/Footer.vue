@@ -4,18 +4,25 @@ export default {
   methods:{
     onClickPrivacy(){
       this.$router.push("privacy")
+    },
+    onClickContactUs(){
+      this.$router.push("contact-us")
     }
   }
 };
 </script>
 <template>
   <v-footer class="mx-auto d-flex justify-center accent ma-2" absolute>
-    <span class="secondary--text text-body-2 mr-5">
+    <span class="secondary--text text-body-2 mr-5 hover-privacy" @click='onClickPrivacy'>
+      Aydınlatma metni</span
+    >
+    <v-divider vertical></v-divider>
+    <span class="secondary--text text-body-2 mr-5 ml-5">
      &copy; {{ new Date().getFullYear() }} mophead</span
     >
     <v-divider vertical></v-divider>
-    <span class="secondary--text text-body-2 ml-5 hover-privacy" @click='onClickPrivacy'>
-      Aydınlatma Metni</span
+    <span class="secondary--text text-body-2 ml-5 hover-privacy" @click='onClickContactUs'>
+      Bize ulaşın</span
     >
   </v-footer>
 </template>

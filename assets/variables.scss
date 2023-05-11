@@ -3,3 +3,8 @@ $font-size-root: 14px;
 $font-size-root: 14px;
 $input-font-size: 14px;
 $label-font-size: 14px;
+$container-max-widths: (
+    'md': 1280px,
+    'lg': 1280px,
+    'xl': 1280px
+);

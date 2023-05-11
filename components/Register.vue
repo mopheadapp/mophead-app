@@ -49,11 +49,9 @@ export default {
         this.button.loading = true;
         this.button.state = false;
         await axios(config);
-        setTimeout(() => {
-          this.button.loading = false;
-          this.button.state = true;
-          this.isSuccess = true;
-        }, 1000);
+        this.button.loading = false;
+        this.button.state = true;
+        this.isSuccess = true;
       } catch (err) {
         this.button.errorState = true;
         if(err.response.data.message === "Enter a valid tax number"){
@@ -91,7 +89,7 @@ export default {
   <v-dialog v-model="registerPrompt" @click:outside="close" width="auto">
     <v-card
       v-if="!isSuccess"
-      elevation="2"
+      elevation="0"
       color="accent"
       class="rounded-lg mx-auto"
       width="500px"
@@ -133,7 +131,7 @@ export default {
           large
           :loading="button.loading"
           :disabled="!buttonState || !this.button.state"
-          elevation="2"
+          elevation="0"
           color="primary"
           class="rounded-lg text-capitalize btnText--text font-weight-bold text-body-1"
           block
@@ -143,7 +141,7 @@ export default {
     </v-card>
     <v-card
       v-else
-      elevation="2"
+      elevation="0"
       color="accent"
       class="rounded-lg mx-auto"
       width="500px"

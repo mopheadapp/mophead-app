@@ -10,6 +10,7 @@ export default {
       <v-container fill-height>
         <Nuxt />
       </v-container>
+      <v-divider></v-divider>
       <Footer />
     </v-main>
   </v-app>

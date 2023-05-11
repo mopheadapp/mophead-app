@@ -11,7 +11,7 @@ export default {
   };
 </script>
 <template>
-  <div>
+  <div class='align-self-start mt-12'>
     <h1 class='pr-5 pl-5 pt-2'>Kişisel Veri Gizlilik Politikası ve Aydınlatma Metni</h1>
     <h2 class='pr-5 pl-5 pt-2'>Giriş</h2>
     <p class='pr-5 pl-5 pt-2 secondaryText--text'> 

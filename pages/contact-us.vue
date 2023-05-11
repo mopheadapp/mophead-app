@@ -45,7 +45,7 @@ export default {
 };
 </script>
 <template>
-    <v-row>
+      <v-row class="align-self-start mt-12">
         <v-col cols="12" md="6">
             <div class='d-block justify-center'>
                 <div class='mb-12 text-h4 text--text font-weight-bold'>

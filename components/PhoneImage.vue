@@ -7,11 +7,11 @@ export default {
         case "xs":
           return "280px";
         case "sm":
-          return "400px";
+          return "360x";
         case "md":
-          return "480px";
+          return "400px";
         case "lg":
-          return "540px";
+          return "480px";
         case "xl":
           return "600px";
       }

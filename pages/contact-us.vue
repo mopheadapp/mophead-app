@@ -15,14 +15,12 @@ export default {
       },
     };
   },
-  created(){
-   this.setButtonDisabled(false)
-  },
   computed:{
-    ...mapGetters({getBaseURL:"getBaseURL"})
+    ...mapGetters({
+      getBaseURL:"getBaseURL"
+    })
   },
   methods: {
-    ...mapMutations({ setButtonDisabled: "setButtonDisabled" }),
     async send(){
         try {
         const config = {
@@ -62,10 +60,9 @@ export default {
                     v-model='data.body'
                     outlined 
                     height='320' 
-                    placeholder='Yorumlarınız bizim için önemli'
                 />
                 <div class='mb-10 text-caption mt-n6 text--text'>
-                    Lütfen sorunuzu yazın. Bir destek personeli size en kısa zamanda yanıt verecektir
+                    Lütfen talebinizi yazın. Bir destek personeli size en kısa zamanda yanıt verecektir
                 </div>
                 <v-btn 
                     :loading="button.loading"

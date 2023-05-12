@@ -94,7 +94,7 @@ export default {
       class="rounded-lg mx-auto"
       width="500px"
     >
-      <v-card-title class="text-h6 font-weight-bold text--text pa-5" >Kayıt</v-card-title>
+      <v-card-title class="text-h4 font-weight-bold text--text pa-5">Kayıt</v-card-title>
       <v-text-field
         v-model="data.taxNumber"
         outlined
@@ -105,7 +105,7 @@ export default {
         type="number"
         :error="button.errorState"
         @input="removeError"
-      ></v-text-field>
+      />
       <v-text-field
         v-model="data.email"
         outlined
@@ -115,7 +115,7 @@ export default {
         class="rounded-lg ma-5"
         :error="button.errorState"
         @input="removeError"
-      ></v-text-field>
+      />
       <v-text-field
         v-model="data.phoneNumber"
         outlined
@@ -125,7 +125,7 @@ export default {
         :error="button.errorState"
         :rules="[!button.errorState || button.message]"
         @input="removeError"
-      ></v-text-field>
+      />
       <div class="pa-5 pt-0">
         <v-btn
           large
@@ -136,7 +136,12 @@ export default {
           class="rounded-lg text-capitalize btnText--text font-weight-bold text-body-1"
           block
           @click="confirm"
-          >Gönder</v-btn>
+        >
+          Gönder
+        </v-btn>
+        <div class='text-caption text--text mt-5'>
+          *Bilgileriniz kontrol edildikten girdiğiniz e-mail adresine geçici şifre gönderilecektir.
+        </div>
       </div>
     </v-card>
     <v-card

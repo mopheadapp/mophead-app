@@ -4,5 +4,4 @@ export default () => ({
         prod: "https://apis.mophead.app/api"
     },
     registerPrompt: false,
-    buttonDisabled: true
 })

@@ -7,16 +7,13 @@ export default {
       {icon:'mdi-facebook',text:"Facebook"},
       {icon:'mdi-twitter',text:"Twitter"},
       {icon:'mdi-instagram',text:"Instagram"},
-      {icon:'mdi-linkedin',text:"Linkedin"}
+      {icon:'mdi-linkedin',text:"LinkedIn"}
     ],
     };
   },
   methods:{
-    onClickPrivacy(){
-      this.$router.push("privacy")
-    },
-    onClickContactUs(){
-      this.$router.push("contact-us")
+    onClick(page){
+      this.$router.push(page)
     },
     onClickSocial(social){
       let url = null
@@ -40,15 +37,16 @@ export default {
             <div class='text-h5 font-weight-bold mb-4'>Şirket</div>
             <div class='text-body-1 mb-2 secondaryText--text'>Biz kimiz</div>
             <div class='text-body-1 mb-2 secondaryText--text'>Ekip</div>
-            <div class='text-body-1 mb-2 secondaryText--text'>Fiyatlama</div>
-            <div class='text-body-1 mb-2 secondaryText--text text-decoration-underline hover-privacy' @click='onClickSocial("Clinic")'>clinic.mophead.app</div>
+            <div class='text-body-1 mb-2 secondaryText--text'>Blog</div>
+            <div class='text-body-1 mb-2 secondaryText--text hover-privacy' @click='onClick("pricing")'>Fiyatlama</div>
+            <div class='text-body-1 mb-2 secondaryText--text hover-privacy' @click='onClickSocial("Clinic")'>Klinik</div>
           </div>
         </v-col>
         <v-col cols="12" sm="4" align-self='start' class='d-flex justify-sm-end justify-start pa-4'>
           <div>
             <div class='text-h5 font-weight-bold mb-4'>Yardım</div>
-            <div class='text-body-1 mb-2 secondaryText--text hover-privacy' @click='onClickPrivacy'>Aydınlatma metni</div>
-            <div class='text-body-1 mb-2 secondaryText--text hover-privacy' @click='onClickContactUs'>Bize ulaşın</div>
+            <div class='text-body-1 mb-2 secondaryText--text hover-privacy' @click='onClick("privacy")'>Aydınlatma metni</div>
+            <div class='text-body-1 mb-2 secondaryText--text hover-privacy' @click='onClick("contact-us")'>Bize ulaşın</div>
           </div>
         </v-col>
         <v-col cols="12" sm="4" align-self='start' class='d-flex justify-sm-end justify-start pa-4'>
@@ -56,7 +54,7 @@ export default {
             <div class='text-h5 font-weight-bold mb-4'>Sosyal medya</div>
             <div v-for="(item, i) in items">
               <div class='d-flex text-body-1 mb-2 hover-privacy' @click='onClickSocial(item.text)'>
-                <v-icon v-text="item.icon" color='text' class='mr-2'></v-icon>
+                <v-icon v-text="item.icon" color='text' class='mr-2' small></v-icon>
                 <div class='text-body-1  secondaryText--text'>{{ item.text }}</div>
               </div>
             </div>

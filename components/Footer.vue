@@ -38,7 +38,7 @@ export default {
             <div class='text-body-1 mb-2 secondaryText--text'>Biz kimiz</div>
             <div class='text-body-1 mb-2 secondaryText--text'>Ekip</div>
             <div class='text-body-1 mb-2 secondaryText--text'>Blog</div>
-            <div class='text-body-1 mb-2 secondaryText--text hover-privacy' @click='onClick("pricing")'>Fiyatlama</div>
+            <div class='text-body-1 mb-2 secondaryText--text hover-privacy' @click='onClick("pricing")'>Fiyatlar</div>
             <div class='text-body-1 mb-2 secondaryText--text hover-privacy' @click='onClickSocial("Clinic")'>Klinik</div>
           </div>
         </v-col>

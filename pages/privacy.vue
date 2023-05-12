@@ -1,6 +1,12 @@
 <script>
 export default {
-  name: "PrivacyPage"
+  name: "PrivacyPage",
+  head() {
+    const title = "Aydınlatma metni"
+    return {
+      title,
+    };
+  },
   };
 </script>
 <template>

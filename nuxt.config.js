@@ -6,6 +6,7 @@ export default {
   generate: {
     fallback: true
   },
+  loading: false,
   head: {
     titleTemplate: '%s',
     title: 'mophead',

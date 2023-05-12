@@ -2,6 +2,12 @@
 import { mapMutations, mapGetters } from "vuex";
 export default {
   name: "PricingPage",
+  head() {
+    const title = "Fiyatlar"
+    return {
+      title,
+    };
+  },
   computed:{
     ...mapGetters({
         getBaseURL:"getBaseURL"

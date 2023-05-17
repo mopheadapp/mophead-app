@@ -11,9 +11,7 @@ export default {
   <v-app>
     <v-main>
       <AppBar />
-      <v-container class='fill-height'>
-        <Nuxt />
-      </v-container>
+      <Nuxt />
       <v-divider />
       <Footer />
     </v-main>

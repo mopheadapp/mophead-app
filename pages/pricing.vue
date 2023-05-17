@@ -19,7 +19,7 @@ export default {
 }
 </script>
 <template>
-    <v-container class='align-self-start mt-12'>
+    <v-container class='align-self-start mt-12 mb-12' fill-heigth>
         <div class='text-center text-h2 font-weight-bold text--text'>
             {{ $t('pricingHeadText') }}
         </div>

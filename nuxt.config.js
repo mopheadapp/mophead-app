@@ -24,6 +24,25 @@ export default {
       { href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap", rel: "stylesheet" }
     ]
   },
+  modules: [
+    '@nuxtjs/i18n',
+  ],
+  i18n: {
+    locales: ['tr', 'en'],
+    defaultLocale: 'tr',
+    strategy: 'prefix',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          welcome: 'Welcome'
+        },
+        tr: {
+          welcome: 'Hoşgeldin'
+        }
+      }
+    }
+  },
   components: true,
   buildModules: [
     '@nuxtjs/vuetify',

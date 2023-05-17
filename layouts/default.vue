@@ -1,22 +1,22 @@
 <script>
-import Register from "../components/Register.vue";
-import Footer from "../components/Footer.vue";
-import AppBar from "../components/AppBar.vue";
+import Register from "../components/Register.vue"
+import Footer from "../components/Footer.vue"
+import AppBar from "../components/AppBar.vue"
 export default {
   name: "DefaultLayout",
-  components: { Register, Footer, AppBar  },
-};
+  components: { Register, Footer, AppBar },
+}
 </script>
 <template>
   <v-app>
     <v-main>
-      <AppBar/>
-      <v-container>
-        <Nuxt/>
+      <AppBar />
+      <v-container class='fill-height'>
+        <Nuxt />
       </v-container>
-      <v-divider/>
-      <Footer/>
+      <v-divider />
+      <Footer />
     </v-main>
-    <Register/>
+    <Register />
   </v-app>
 </template>

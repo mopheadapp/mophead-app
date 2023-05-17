@@ -10,16 +10,16 @@ export default {
     return {
       pageNotFound: "404 Not Found",
       otherError: "An error occurred",
-    };
+    }
   },
   head() {
     const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError;
+      this.error.statusCode === 404 ? this.pageNotFound : this.otherError
     return {
       title,
-    };
+    }
   },
-};
+}
 </script>
 <template>
   <v-container>
@@ -27,22 +27,14 @@ export default {
       <div class="text-h6 font-weight-bold text--text ma-8">
         The page you are looking for does not exist
       </div>
-      <div
-        class="text-h3 font-weight-bold text--text ma-8"
-        v-if="error.statusCode === 404"
-      >
+      <div class="text-h3 font-weight-bold text--text ma-8" v-if="error.statusCode === 404">
         {{ pageNotFound }}
       </div>
       <div v-else class="text-h2 font-weight-bold text--text">
         {{ otherError }}
       </div>
-      <v-btn
-        x-large
-        color="primary"
-        class="rounded-lg text-capitalize ma-8 btnText--text font-weight-bold text-body-1"
-        to="/"
-        >Go to homepage</v-btn
-      >
+      <v-btn x-large color="primary" class="rounded-lg text-capitalize ma-8 btnText--text font-weight-bold text-body-1"
+        :to='localePath("/")'>Go to homepage</v-btn>
     </div>
   </v-container>
 </template>

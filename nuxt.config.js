@@ -53,15 +53,7 @@ export default {
     defaultLocale: 'tr',
     strategy: 'prefix',
     vueI18n: {
-      fallbackLocale: 'tr',
-      messages: {
-        en: {
-          welcome: 'Welcome'
-        },
-        tr: {
-          welcome: 'Hoşgeldin'
-        }
-      }
+      fallbackLocale: 'tr'
     }
   },
   components: true,

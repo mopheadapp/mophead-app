@@ -1,6 +1,4 @@
 <script>
-import { mapMutations, mapGetters } from "vuex"
-import axios from "axios"
 export default {
   name: "ContactUsPage",
   head() {
@@ -21,23 +19,18 @@ export default {
       },
     }
   },
-  computed: {
-    ...mapGetters({
-      getBaseURL: "getBaseURL"
-    })
-  },
   methods: {
     async send() {
       try {
         const config = {
           method: "post",
           headers: { "content-type": "application/json" },
-          url: `${this.getBaseURL}/user/contactUs`,
+          url: `user/contactUs`,
           data: this.data,
         }
         this.button.loading = true
         this.button.state = true
-        await axios(config)
+        await this.$axios(config)
         this.button.loading = false
         this.button.state = false
       } catch (err) {
@@ -60,7 +53,7 @@ export default {
         <div class='mb-10 text-caption mt-n6 text--text'>
           Lütfen talebinizi yazın. Bir destek personeli size en kısa zamanda yanıt verecektir
         </div>
-        <v-btn :loading="button.loading" :disabled="buttonState || button.state" @click='send' color="primary"
+        <v-btn :loading="button.loading" :disabled="button.state" @click='send' color="primary"
           class="rounded-lg text-capitalize btnText--text font-weight-bold text-body-1 mb-6">
           Gönder
         </v-btn>

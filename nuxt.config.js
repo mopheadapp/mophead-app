@@ -1,5 +1,4 @@
 export default {
-  ssr: false,
   server: {
     port: process.env.PORT || 8001
   },
@@ -11,7 +10,7 @@ export default {
     titleTemplate: '%s',
     title: 'mophead',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'tr'
     },
     meta: [
       { charset: 'utf-8' },
@@ -26,7 +25,28 @@ export default {
   },
   modules: [
     '@nuxtjs/i18n',
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
+  axios: {
+    baseURL: 'https://apis.mophead.app/api/',
+    proxyHeaders: false,
+    credentials: false
+  },
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: 'http://localhost:3000/api/',
+      proxyHeaders: false,
+      credentials: false
+    }
+  },
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: 'https://apis.mophead.app/api/',
+      proxyHeaders: false,
+      credentials: false
+    }
+  },
   i18n: {
     locales: ['tr', 'en'],
     defaultLocale: 'tr',

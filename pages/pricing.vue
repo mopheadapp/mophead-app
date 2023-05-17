@@ -1,5 +1,5 @@
 <script>
-import { mapMutations, mapGetters } from "vuex"
+import { mapMutations } from "vuex"
 export default {
     name: "PricingPage",
     head() {
@@ -7,11 +7,6 @@ export default {
         return {
             title,
         }
-    },
-    computed: {
-        ...mapGetters({
-            getBaseURL: "getBaseURL"
-        })
     },
     methods: {
         register() {

@@ -1,6 +1,5 @@
 <script>
-import { mapGetters, mapMutations, mapState } from "vuex"
-import axios from "axios"
+import { mapMutations, mapState } from "vuex"
 export default {
   name: "RegisterComponent",
   data() {
@@ -43,12 +42,12 @@ export default {
         const config = {
           method: "post",
           headers: { "content-type": "application/json" },
-          url: `${this.getBaseURL}/clinic/clinicRegister`,
+          url: `clinic/clinicRegister`,
           data: this.data,
         }
         this.button.loading = true
         this.button.state = false
-        await axios(config)
+        await this.$axios(config)
         this.button.loading = false
         this.button.state = true
         this.isSuccess = true
@@ -74,7 +73,6 @@ export default {
   },
   computed: {
     ...mapState({ registerPrompt: "registerPrompt" }),
-    ...mapGetters({ getBaseURL: "getBaseURL" }),
     buttonState() {
       return (
         this.data.taxNumber.length > 0 &&

@@ -88,7 +88,7 @@ export default {
               </v-chip>
             </template>
             <v-list color='background'>
-              <v-list-item dense v-for="(item, index) in data" :key="index" :to='item.to'>
+              <v-list-item dense v-for="(item, index) in data" :key="index" :to='localePath(item.to)'>
                 <v-list-item-title>{{ $t(item.text) }}</v-list-item-title>
               </v-list-item>
             </v-list>

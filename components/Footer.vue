@@ -35,7 +35,7 @@ export default {
     <v-card flat min-height='320px' color='text'>
       <v-container color='text'>
         <div class='d-flex align-start flex-wrap'>
-          <div class='pa-6 ml-12 mr-12'>
+          <div class='pa-6 mr-12'>
             <div class='text-h5 font-weight-bold mb-4 btnText--text'>{{ $t('company') }}</div>
             <nuxt-link :to='localePath("about")' class='link'>
               <div class='text-body-1 mb-2 btnText--text hover-privacy'>{{ $t('about') }}</div>
@@ -46,7 +46,7 @@ export default {
             <div class='text-body-1 mb-2 btnText--text hover-privacy' @click='onClickSocial("Clinic")'>{{ $t('clinic') }}
             </div>
           </div>
-          <div class='pa-6 ml-12'>
+          <div class='pa-6 ml-lg-12'>
             <div class='text-h5 font-weight-bold mb-4 btnText--text'>{{ $t('help') }}</div>
             <nuxt-link :to='localePath("privacy")' class='link'>
               <div class='text-body-1 mb-2 btnText--text hover-privacy'>{{ $t('privacy') }}</div>

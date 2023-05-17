@@ -11,7 +11,9 @@ export default {
   <v-app>
     <v-main>
       <AppBar />
-      <Nuxt />
+      <v-container>
+        <Nuxt />
+      </v-container>
       <v-divider />
       <Footer />
     </v-main>

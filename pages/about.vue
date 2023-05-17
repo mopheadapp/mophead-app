@@ -10,7 +10,7 @@ export default {
 }
 </script>
 <template>
-    <v-container class='align-self-start mt-12 mb-12' fill-height>
+    <v-container class='align-self-start mt-12 mb-12'>
         <div class='text-left text-h4 font-weight-bold text--text'>
             {{ $t('about') }}
         </div>

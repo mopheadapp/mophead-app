@@ -22,7 +22,7 @@ export default {
 }
 </script>
 <template>
-  <v-container class='ma-12' fill-height>
+  <v-container>
     <div class="text-center">
       <div class="text-h6 font-weight-bold text--text ma-8">
         {{ $t('notExist') }}

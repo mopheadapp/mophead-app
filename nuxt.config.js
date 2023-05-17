@@ -34,22 +34,20 @@ export default {
     proxyHeaders: false,
     credentials: false
   },
-  publicRuntimeConfig: {
-    axios: {
-      browserBaseURL: 'http://localhost:3000/api/',
-      proxyHeaders: false,
-      credentials: false
-    }
-  },
-  privateRuntimeConfig: {
-    axios: {
-      baseURL: 'https://apis.mophead.app/api/',
-      proxyHeaders: false,
-      credentials: false
-    }
-  },
   i18n: {
-    locales: ['tr', 'en'],
+    locales: [
+      {
+        code: 'tr',
+        name: 'Türkçe',
+        file: 'tr.json'
+      },
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en.json'
+      }
+    ],
+    langDir: 'locales/',
     defaultLocale: 'tr',
     strategy: 'prefix',
     vueI18n: {

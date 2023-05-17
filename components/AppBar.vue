@@ -5,9 +5,9 @@ export default {
   data() {
     return {
       data: [
-        { to: "pricing", text: "Fiyatlar" },
-        { to: "about", text: "Hakkında" },
-        { to: "contact-us", text: "Bize ulaşın" }
+        { to: "pricing", text: "prices" },
+        { to: "about", text: "about" },
+        { to: "contact-us", text: "contactUs" }
       ]
     }
   },
@@ -66,22 +66,22 @@ export default {
           <div class='d-none d-md-flex'>
             <v-chip color='transparent' text-color='text' outlined label class='mr-2 ml-2 hover-privacy font-weight-bold'
               :to='localePath("pricing")'>
-              Fiyatlar
+              {{ $t('prices') }}
             </v-chip>
             <v-chip color='transparent' text-color='text' outlined label class='mr-2 ml-2 hover-privacy font-weight-bold'
               :to='localePath("about")'>
-              Hakkında
+              {{ $t('about') }}
             </v-chip>
             <v-chip color='transparent' text-color='text' outlined label class='mr-2 ml-2 hover-privacy font-weight-bold'
               :to='localePath("contact-us")'>
-              Bize ulaşın
+              {{ $t('contactUs') }}
             </v-chip>
           </div>
           <v-menu bottom offset-y transition="slide-y-transition" open-on-hover>
             <template v-slot:activator="{ on, attrs }">
               <v-chip v-bind="attrs" v-on="on" color='transparent' text-color='text' outlined label
                 class='mr-2 ml-2 hover-privacy font-weight-bold d-flex d-md-none'>
-                Ana sayfa
+                {{ $t('home') }}
                 <v-icon right>
                   mdi-menu-down
                 </v-icon>
@@ -89,14 +89,14 @@ export default {
             </template>
             <v-list color='background'>
               <v-list-item dense v-for="(item, index) in data" :key="index" :to='item.to'>
-                <v-list-item-title>{{ item.text }}</v-list-item-title>
+                <v-list-item-title>{{ $t(item.text) }}</v-list-item-title>
               </v-list-item>
             </v-list>
           </v-menu>
           <v-btn elevation="0" color="primary"
             class="rounded-lg text-capitalize btnText--text font-weight-bold text-body-1 ml-16 d-none d-sm-flex"
             @click="register">
-            Kurumsal kayıt
+            {{ $t('joinUs') }}
           </v-btn>
         </v-app-bar>
       </v-container>

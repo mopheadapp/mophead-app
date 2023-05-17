@@ -8,11 +8,10 @@ export default {
   <div>
     <v-sheet class='pa-12'>
       <div class="ma-2 mb-8 text--text font-weight-bold text-h3">
-        Sizin için en iyi klinikleri bulun, mophead ile!
+        {{ $t('homeMainTitle') }}
       </div>
       <div class="ma-2 mb-4 secondaryText--text text-h6">
-        mophead ile Türkiye'nin dört bir yanından en iyi saç ekim, saç simülasyonu ve saç protezi merkezlerine talep
-        gönderebilir, mesajlaşabilir ve operasyondan sonra kliniğini yorumlayabilirsin.
+        {{ $t('homeSubTitle') }}
       </div>
     </v-sheet>
     <MarketIcons />

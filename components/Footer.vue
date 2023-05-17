@@ -12,9 +12,6 @@ export default {
     }
   },
   methods: {
-    onClick(page) {
-      this.$router.push(`${this.$i18n.locale}/page`)
-    },
     onClickSocial(social) {
       let url = null
       if (social === "Facebook") url = "https://www.facebook.com/mopheadapp"
@@ -25,6 +22,11 @@ export default {
       window.open(url, '_blank')
     },
 
+  },
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+    },
   }
 }
 </script>
@@ -34,26 +36,26 @@ export default {
       <v-container color='text'>
         <div class='d-flex align-start flex-wrap'>
           <div class='pa-6 ml-12 mr-12'>
-            <div class='text-h5 font-weight-bold mb-4 btnText--text'>Şirket</div>
+            <div class='text-h5 font-weight-bold mb-4 btnText--text'>{{ $t('company') }}</div>
             <nuxt-link :to='localePath("about")' class='link'>
-              <div class='text-body-1 mb-2 btnText--text hover-privacy'>Hakkında</div>
+              <div class='text-body-1 mb-2 btnText--text hover-privacy'>{{ $t('about') }}</div>
             </nuxt-link>
             <nuxt-link :to='localePath("pricing")' class='link'>
-              <div class='text-body-1 mb-2 btnText--text hover-privacy'>Fiyatlar</div>
+              <div class='text-body-1 mb-2 btnText--text hover-privacy'>{{ $t('prices') }}</div>
             </nuxt-link>
-            <div class='text-body-1 mb-2 btnText--text hover-privacy' @click='onClickSocial("Clinic")'>Klinik</div>
+            <div class='text-body-1 mb-2 btnText--text hover-privacy' @click='onClickSocial("Clinic")'>{{ $t('clinic') }}
+            </div>
           </div>
           <div class='pa-6 ml-12'>
-            <div class='text-h5 font-weight-bold mb-4 btnText--text'>Yardım</div>
+            <div class='text-h5 font-weight-bold mb-4 btnText--text'>{{ $t('help') }}</div>
             <nuxt-link :to='localePath("privacy")' class='link'>
-              <div class='text-body-1 mb-2 btnText--text hover-privacy'>Aydınlatma metni</div>
+              <div class='text-body-1 mb-2 btnText--text hover-privacy'>{{ $t('privacy') }}</div>
             </nuxt-link>
             <nuxt-link :to='localePath("terms-and-conditions")' class='link'>
-              <div class='text-body-1 mb-2 btnText--text hover-privacy'>Kullanım
-                şartnamesi</div>
+              <div class='text-body-1 mb-2 btnText--text hover-privacy'>{{ $t('termsAndConditions') }}</div>
             </nuxt-link>
             <nuxt-link :to='localePath("contact-us")' class='link'>
-              <div class='text-body-1 mb-2 btnText--text hover-privacy'>Bize ulaşın</div>
+              <div class='text-body-1 mb-2 btnText--text hover-privacy'>{{ $t('contactUs') }}</div>
             </nuxt-link>
           </div>
         </div>
@@ -70,6 +72,10 @@ export default {
             </div>
           </div>
         </div>
+        <nuxt-link v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)"
+          class='btnText--text'>{{
+            locale.name
+          }}</nuxt-link>
       </v-container>
     </v-footer>
   </div>

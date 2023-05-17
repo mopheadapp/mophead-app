@@ -53,7 +53,7 @@ export default {
     defaultLocale: 'tr',
     strategy: 'prefix',
     vueI18n: {
-      fallbackLocale: 'en',
+      fallbackLocale: 'tr',
       messages: {
         en: {
           welcome: 'Welcome'

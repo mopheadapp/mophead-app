@@ -1,5 +1,4 @@
 export default {
-  ssr: false,
   server: {
     port: process.env.PORT || 8001
   },

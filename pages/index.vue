@@ -1,6 +1,18 @@
 <script>
 export default {
-  name: "IndexPage"
+  name: "IndexPage",
+  head() {
+    const title = `mophead | ${this.$t('homeMainTitle')}`
+    return {
+      title,
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      },
+      meta: [
+        { hid: 'description', name: 'description', content: this.$t('homeSubTitle') }
+      ]
+    }
+  },
 }
 </script>
 <template>

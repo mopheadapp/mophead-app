@@ -2,9 +2,15 @@
 export default {
   name: "PrivacyPage",
   head() {
-    const title = "Aydınlatma metni"
+    const title = `mophead | ${this.$t('privacy')}`
     return {
       title,
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      },
+      meta: [
+        { hid: 'description', name: 'description', content: this.$t('privacyDescription') }
+      ]
     }
   },
 }

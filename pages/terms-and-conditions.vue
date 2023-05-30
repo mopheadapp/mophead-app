@@ -2,9 +2,15 @@
 export default {
     name: "TermsAndConditionsPage",
     head() {
-        const title = "Kullanım şartnamesi"
+        const title = `mophead | ${this.$t('termsAndConditions')}`
         return {
             title,
+            htmlAttrs: {
+                lang: this.$i18n.locale
+            },
+            meta: [
+                { hid: 'description', name: 'description', content: this.$t('termsDescription') }
+            ]
         }
     },
 }

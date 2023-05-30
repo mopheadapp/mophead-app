@@ -40,5 +40,10 @@
 "notExist":"The page you are looking for does not exist",
 "notFound":"404",
 "otherError":"An error occurred",
-"goToHomepage":"Go to homepage"
+"goToHomepage":"Go to homepage",
+"aboutDescription":"You can find information about mophead",
+"contactDescription":"This page enables you to contact with mophead",
+"pricingDescription":"You can find pricing strategy about mophead",
+"privacyDescription":"You can find privacy information about mophead",
+"termsDescription":"You can find terms and conditions about mophead"
 }

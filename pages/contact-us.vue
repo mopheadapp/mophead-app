@@ -2,9 +2,15 @@
 export default {
   name: "ContactUsPage",
   head() {
-    const title = "Bize ulaşın"
+    const title = `mophead | ${this.$t('contactUs')}`
     return {
       title,
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      },
+      meta: [
+        { hid: 'description', name: 'description', content: this.$t('contactDescription') }
+      ]
     }
   },
   data() {

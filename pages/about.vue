@@ -2,9 +2,15 @@
 export default {
     name: "AboutPage",
     head() {
-        const title = "Hakkında"
+        const title = `mophead | ${this.$t('about')}`
         return {
             title,
+            htmlAttrs: {
+                lang: this.$i18n.locale
+            },
+            meta: [
+                { hid: 'description', name: 'description', content: this.$t('aboutDescription') }
+            ]
         }
     },
 }

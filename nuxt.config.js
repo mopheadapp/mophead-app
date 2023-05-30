@@ -7,16 +7,11 @@ export default {
   },
   loading: false,
   head: {
-    titleTemplate: '%s',
-    title: 'mophead',
-    htmlAttrs: {
-      lang: 'tr'
-    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'author', name: 'author', content: 'mophead' },
+      { hid: 'keywords', name: 'keywords', content: 'mophead, saç, hair, hair transplant, saç ekimi' },
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/favicon.png' },

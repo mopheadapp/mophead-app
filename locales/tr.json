@@ -40,5 +40,10 @@
 "notExist":"Aradığınız sayfa bulunamadı",
 "notFound":"404",
 "otherError":"Bir hata oluştu",
-"goToHomepage":"Ana sayfaya git"
+"goToHomepage":"Ana sayfaya git",
+"aboutDescription":"mophead hakkındaki bilgilere ulaşabilirsiniz",
+"contactDescription":"Bu sayfa ile mophead'e ulaşabilirsiniz",
+"pricingDescription":"mophead fiyatlama stratejisini görebilirsiniz",
+"privacyDescription":"mophead gizlilik sözleşmesine ulaşabilirsiniz",
+"termsDescription":"mophead kullanım sözleşmesine ulaşabilirsiniz"
 }

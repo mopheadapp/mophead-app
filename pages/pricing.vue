@@ -3,9 +3,15 @@ import { mapMutations } from "vuex"
 export default {
     name: "PricingPage",
     head() {
-        const title = "Fiyatlar"
+        const title = `mophead | ${this.$t('prices')}`
         return {
             title,
+            htmlAttrs: {
+                lang: this.$i18n.locale
+            },
+            meta: [
+                { hid: 'description', name: 'description', content: this.$t('pricingDescription') }
+            ]
         }
     },
     methods: {
